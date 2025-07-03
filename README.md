@@ -93,134 +93,172 @@ It is used in:
 
 ```text
 Minimax evaluates all → Alpha-beta skips irrelevant paths!
-🧩 5. Constraint Satisfaction Problems (CSP)
-🧱 Components:
-Variables — e.g., X, Y, Z
+## 🧩 5. Constraint Satisfaction Problems (CSP)
 
-Domains — e.g., {Red, Green, Blue}
+### 🧱 Components:
+- **Variables:** e.g., X, Y, Z  
+- **Domains:** e.g., {Red, Green, Blue}  
+- **Constraints:** e.g., X ≠ Y  
 
-Constraints — e.g., X ≠ Y
+---
 
-📊 Cryptarithmetic Example:
-SEND + MORE = MONEY
-Each letter = unique digit → solved via:
+### 📊 Cryptarithmetic Example
 
-Backtracking
+**Problem:** `SEND + MORE = MONEY`  
+Each letter represents a unique digit.  
+Solved using:
 
-Forward Checking
+- ✅ Backtracking  
+- ✅ Forward Checking  
+- ✅ Constraint Propagation  
 
-Constraint Propagation
+---
 
-🔍 Local Consistency Techniques:
-Type	Description
-Arc Consistency	Each value in X has a supporting value in Y
-Path Consistency	Extends arc to three-variable constraints
-Global	All constraints satisfied across variables
+### 🔍 Local Consistency Techniques
 
-🎯 Advanced Techniques:
-MRV Heuristic: Choose variable with fewest legal values
+| Type              | Description                                   |
+|-------------------|-----------------------------------------------|
+| **Arc Consistency**   | Each value in X has a supporting value in Y   |
+| **Path Consistency**  | Ensures consistency over 3-variable paths     |
+| **Global Consistency**| All constraints satisfied across all variables|
 
-Degree Heuristic: Choose variable involved in most constraints
+---
 
-Forward Checking & Backtracking: Reduce invalid paths early
+### 🎯 Advanced Techniques
 
-🔗 6. Logic and Reasoning
-🧠 Propositional Logic
-Statements with true/false values.
-Example:
+- **MRV Heuristic:** Choose variable with the fewest legal values  
+- **Degree Heuristic:** Choose variable involved in most constraints  
+- **Forward Checking & Backtracking:** Reduce invalid paths early  
 
-If it rains → Ground is wet → P → Q
+---
 
-🔄 Inference Types
-Term	Logic Form	Example
-Inverse	¬P → ¬Q	Not raining → Not wet
-Converse	Q → P	Wet ground → It rained
-Contrapositive	¬Q → ¬P	Not wet → Not raining
+## 🔗 6. Logic and Reasoning
 
-🧾 Normal Forms:
-CNF (Conjunctive): AND of ORs
+### 🧠 Propositional Logic
+Deals with statements that are either **true or false**.  
+**Example:**  
+If it rains → The ground is wet → `P → Q`
 
-DNF (Disjunctive): OR of ANDs
+---
 
-🔢 Predicate Logic:
-Uses variables and quantifiers: ∀x, ∃y
-Example: ∀x (Student(x) → Studies(x))
+### 🔄 Inference Types
 
-🧮 7. Optimization Algorithms
-⛓️ Branch and Bound
-Explore all possibilities but prune using bounds
+| Term              | Logic Form   | Example                      |
+|-------------------|--------------|------------------------------|
+| **Inverse**       | ¬P → ¬Q      | Not raining → Not wet        |
+| **Converse**      | Q → P        | Wet ground → It rained       |
+| **Contrapositive**| ¬Q → ¬P      | Not wet → Not raining        |
 
-Used for TSP, scheduling, and Knapsack problems
+---
 
-🎒 Knapsack Problem:
-Choose items with max value under weight limit
-Approaches:
+### 🧾 Normal Forms
 
-Greedy
+- **CNF (Conjunctive Normal Form):** AND of ORs  
+- **DNF (Disjunctive Normal Form):** OR of ANDs  
 
-Dynamic Programming
+---
 
-Branch & Bound
+### 🔢 Predicate Logic
 
-🕹️ 8. Reinforcement Learning
-An agent learns to make decisions based on rewards.
+Uses variables and quantifiers: `∀x`, `∃y`  
+**Example:** ∀x (Student(x) → Studies(x))
 
-Core Elements:
+---
 
-Agent, Environment
+## 🧮 7. Optimization Algorithms
 
-Actions, Rewards
+### ⛓️ Branch and Bound
+- Explore all possible solutions but **prune paths** that exceed known bounds  
+- Used in **TSP**, **job scheduling**, and **knapsack** problems
 
-Policy, Q-Values
+---
 
-🔁 Q-learning Formula:
-text
-Copy
-Edit
-Q(s, a) ← Q(s, a) + α [r + γ * max Q(s’, a’) − Q(s, a)]
-α = Learning rate, γ = Discount factor
- 📂 9. Information Retrieval (IR)
-Process:
-Indexing
+### 🎒 Knapsack Problem
 
-Query processing
+Choose items that **maximize value** under a weight limit.  
+**Solving Approaches:**
 
-Ranking documents
+- ⚡ Greedy Method  
+- 🧠 Dynamic Programming  
+- ⛓️ Branch & Bound  
 
-Evaluation Metrics:
-Metric	Description
-Precision	Relevant / Retrieved
-Recall	Relevant / Total Relevant
-F1-Score	Harmonic mean of Precision and Recall
-MAP	Mean Average Precision
+---
 
-🤖 10. Robotics
-What is a Robot?
-An intelligent machine that performs tasks autonomously.
+## 🕹️ 8. Reinforcement Learning (RL)
 
-🔧 Hardware:
-Sensors, Actuators, Motors, Controllers
+An agent learns optimal behavior through **trial-and-error** using **rewards and penalties**.
 
-💻 Software:
-ROS (Robot Operating System), AI Logic, Path Planning
+### 🔁 Core Elements:
+- Agent  
+- Environment  
+- Actions  
+- Rewards  
+- Policy & Q-Values  
 
-Applications:
-🏭 Industrial Automation
+---
 
-🩺 Medical Surgery
+### 🧮 Q-learning Formula
 
-🪖 Military Operations
+> Where:  
+> `α` = Learning rate  
+> `γ` = Discount factor  
 
-🏠 Home Cleaning
+---
 
-🚀 Space Exploration
+## 📂 9. Information Retrieval (IR)
 
-Categories:
-Wheeled robots
+### 📋 Process Involves:
+- Document Indexing  
+- Query Processing  
+- Ranking Results  
 
-Humanoids
+### 📊 Evaluation Metrics
 
-Drones
+| Metric     | Description                                   |
+|------------|-----------------------------------------------|
+| **Precision**  | Relevant documents retrieved / Retrieved           |
+| **Recall**     | Relevant documents retrieved / All relevant docs  |
+| **F1-Score**   | Harmonic mean of Precision & Recall               |
+| **MAP**        | Mean Average Precision                            |
 
-Swarm robots
+---
+
+## 🤖 10. Robotics
+
+### 💡 What is a Robot?
+
+A **robot** is an intelligent machine capable of performing tasks **autonomously** or **semi-autonomously**.
+
+---
+
+### 🔧 Hardware Components:
+- Sensors  
+- Actuators  
+- Motors  
+- Microcontrollers  
+
+### 💻 Software Components:
+- ROS (Robot Operating System)  
+- Pathfinding algorithms  
+- AI logic modules  
+
+---
+
+### 🚀 Applications of Robotics:
+
+- 🏭 Industrial Automation  
+- 🩺 Medical Surgery  
+- 🪖 Military Operations  
+- 🏠 Domestic/Home Cleaning  
+- 🚀 Space Exploration  
+
+---
+
+### 🧱 Categories of Robots:
+
+- Wheeled Robots  
+- Humanoid Robots  
+- Swarm Robots  
+- Aerial Drones  
+
 
