@@ -91,7 +91,7 @@ It is used in:
 - **Minimax:** Two-player, zero-sum games (e.g., chess, tic-tac-toe)  
 - **Alpha-Beta Pruning:** Cuts unnecessary branches from Minimax tree, improves efficiency  
 
-```text
+
 Minimax evaluates all → Alpha-beta skips irrelevant paths!
 ## 🧩 5. Constraint Satisfaction Problems (CSP)
 
